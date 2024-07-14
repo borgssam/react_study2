@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // //변수 덮어 쓰기 및 재선언
+    // var val1 = "var변수"
+    // console.log(val1);
+    // //var 변수는 덮어 쓰기 가능
+    // val1 = "var 변수 덮어 쓰기";
+    // console.log(val1);
+    // //var 변수는 재선언 가능
+    // var val1 = "var 변수를 재선언"
+    // console.log(val1);
+  </script>
+  <script>
+    // //변수 덮어 쓰기 및 재선언
+    // let val2 = "let 변수"
+    // console.log(val2);
+    // //let 변수는 덮어 쓰기 가능
+    // val2 = "let 변수 덮어 쓰기";
+    // console.log(val2);
+    // //let 변수는 재선언 불가능
+    // let val2 = "var 변수를 재선언"  
+    // console.log(val2);
+  </script>
+  <script>
+    // //변수 덮어 쓰기 및 재선언
+    // const val3 = "cosnt 변수"
+    // console.log(val3);
+    // //const 변수는 덮어 쓰기 불가능
+    // val3 = "const 변수 덮어 쓰기";
+    // console.log(val3);
+    // //const 변수는 재선언 불가능
+    // let val3 = "const 변수를 재선언"  
+    // console.log(val3);
+  </script>
+  <script>
+    // //객체정의
+    // const obj1 = {
+    //   name : "홍길동", age : 24
+    // }
+    // console.log(obj1);
+    // obj1.name = "강감찬";
+    // console.log(obj1);
+    // obj1.addr = "수원";
+    // console.log(obj1);
+  </script>
+  <script>
+    // //배열
+    // const arr1 = ["고양이", "강아지"];
+    // console.log(arr1);
+
+    // //첫 번째 값 변경
+    // arr1[0] = "망아지";
+    // console.log(arr1);
+    // arr1.push("원숭이");
+    // console.log(arr1);
+  </script>
+
+  <script>
+    //템플릿 문자열
+    //이름을 저장한 변수
+    // const name ="홍길동";
+    // const age = 24;
+    // const msg = "내 이름은 " + name + "입니다. 나이는 " + age+"살입니다." ;
+    // console.log(msg);
+
+    // const msg2 = `내 이름은 ${name}입니다. 나이는 ${age}살입니다.` ;
+    // console.log(msg2);
+  </script>
+
+  <script>
+    // function sayHello(){
+    //   return "안녕하세요";
+    // }
+    // //휘을 나타내는 숫자를 저장한 변수
+    // const month = 1;
+    // const message = `여러분 ${sayHello()} 오늘부터 ${month * 3}월입니다.`;
+    // console.log(message);
+  </script>
+
+  <script>
+    //람다함수
+    // function func(param){
+    //   return param;
+    // }
+
+    // console.log(func("안녕하세요"));
+
+    // const f = function(value){return value;}
+    // console.log(f("f함수임"));
+
+    // const f2 = value=>{return value;}
+    // console.log(f2("f2함수임"));
+
+    // const f3 = (value1, value2) =>{return value1+value2};
+    // console.log(f3(1,2));
+
+    // const f4 = (value1, value2) => value1+value2;
+    // console.log(f4(1,2));
+
+    // const f5 = (val1,val2)=>({name:val1,age:val2});
+    // console.log(f5("홍길동",25));   
+
+  </script>
+  <script>
+    // //분할대입
+    // const myProfile ={name:"홍길동",age:24};
+    // const msg = `내이름은 ${myProfile.name}입니다.나이는 ${myProfile.age}살입니다.`;
+    // console.log(msg);
+    // const {age, name} = myProfile;
+    // const msg2 = `내이름은 ${name}입니다.나이는 ${age}살입니다.`;
+    // console.log(msg2);
+
+  </script>
+  <script>
+    // //배열분할 대입
+    // const myProfile = ["홍길동", 24];;
+    // const msg = `내이름은 ${myProfile[0]}입니다.나이는 ${myProfile[1]}살입니다.`;
+    // console.log(msg);
+
+
+    // const myProfile2 = ["홍길동", 24];
+    // const [name,age2] = myProfile;
+    // const msg2 = `내이름은 ${name}입니다.나이는 ${age2}살입니다.`;
+    // console.log(msg2);
+  </script>
+  <script>
+    // //디폴트값
+    // const sayHello = (name)=>console.log(`${name}님 안녕하세요`);
+    // sayHello("홍길동");
+
+    // const sayHello2 = (name="홍길동")=>console.log(`${name}님 안녕하세요`);
+    // sayHello2();
+
+    // const sayHello3 = (name="홍길동",age=24)=>console.log(`${name}님 안녕하세요. ${age}살이시군요`);
+    // sayHello3("구찬성");
+
+    // const sayHello4 = (name="홍길동",age)=>console.log(`${name}님 안녕하세요. ${age}살이시군요`);
+    // sayHello4(24);
+
+  </script>
+
+  <script>
+    // const myProfile={
+    //   age:24,
+    // }
+
+    // // const {name} = myProfile;
+    // // const message = `${name}입니다.`;
+    // // console.log(message);
+
+    // const {name = "홍길동"} = myProfile;
+    // const message = `${name}입니다.`;
+    // console.log(message);
+  </script>
+  <script>
+    //스프레드구문(...)
+    // const arr1 = [1,2];
+    // console.log(arr1);
+    // console.log(...arr1);
+  </script>
+  <script>
+    // const arr1=[1,2];
+    // const sumFunc = (num1, num2)=>{console.log(num1+num2);}
+    // sumFunc(arr1[0],arr1[1]);
+    // sumFunc(...arr1);
+  </script>
+  <script>
+    // const arr2=[1,2,3,4,5];
+    // //분할 대입시 남은 요소를 모은다
+    // const [num1, num2, ...arr3] = arr2;
+    // console.log(num1);
+    // console.log(num2);
+    // console.log(arr3);
+  </script>
+  <script>
+    // const arr4=[10,20];
+    // const arr5=[30,40];
+    // const arr6=[...arr4,...arr5];
+    // console.log(arr6);
+  </script>
+  <script>
+    // const obj4 = {name:"홍길동", age:24};
+    // const obj5 = {sex:"남", nation:"한국",name:"강감찬"};
+    // const obj6 = {...obj4,...obj5};
+    // console.log(obj6);
+  </script>
+  <script>
+    // //얕은복사
+    // const arr4=[10,20];
+    // const arr8= arr4;
+    // console.log(arr8);
+
+    // arr8[0]=100;
+    // console.log(arr4);
+    // console.log(arr8);
+  </script>
+  <script>
+    //깊은복사
+    // const arr4=[10,20];
+    // const arr8= [...arr4];
+    // console.log(arr8);
+
+    // arr8[0]=100;
+    // console.log('arr4=>',arr4);
+    // console.log('arr8=>',arr8);
+  </script>
+  <script>
+    // //객체생략표시법
+    // const name = "홍길동";
+    // const age  = 24;
+    // // const user{
+    // //   name:name,
+    // //   age:age,
+    // // };
+    // const user = {name,age};
+    // console.log(user);
+  </script>
+  <script>
+    //map,filter ------------------------------
+    //기존for문
+    // const nameArr=['홍길동', '강감찬', '이순신'];
+    // for(let idx = 0; idx < nameArr.length; idx++){
+    //   console.log(nameArr[idx]);
+    // }
+  </script>
+  <script>
+    //map1
+    // const nameArr=['홍길동', '강감찬', '이순신'];
+    // const nameArr2=nameArr.map( (name)=>{ return name;});
+    // console.log(nameArr2);
+    //map2
+    // const nameArr=['홍길동', '강감찬', '이순신'];
+    // const nameArr2=nameArr.map( (name)=>{ console.log( name);});
+  </script>
+  <script>
+    //filter함수
+    // const numArr = [1,2,3,4,5];
+    // const newNumArr = numArr.filter((num)=>{return num%2===1;});
+    // console.log(newNumArr);
+  </script>
+
+  <script>
+    // //일반적방법
+    // const nameArr=['홍길동','강감찬','을지문덕'];
+    // for(let idx = 1; idx <= nameArr.length; idx++){
+    //   console.log(`${idx}번째 => ${nameArr[idx-1]} 입니다.`);
+    // }
+    // //map사용
+    // nameArr.map((name,idx)=>{console.log(`${idx+1}번째 => ${nameArr[idx]} 입니다.`);});
+  </script>
+  <script>
+    const nameArr=['홍길동','강감찬','을지문덕'];
+    const newNameArr = nameArr.map((name,idx)=>{
+      let result = name;
+      if(name!='홍길동'){
+        result += '장군님';
+      }
+      return result;
+    });
+    console.log(newNameArr);
+
+  </script>
+
+</body>
+</html>
