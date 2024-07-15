@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      border: 1px solid #ccc;
+      padding: 16px;
+      margin:8px;
+    }
+    li>div{
+      display:flex;
+      align-items: center;
+    }
+
+    button{margin-left: 16px;}
+  </style>
+</head>
+<body>
+  <h1 id="title">간단한 메모 애플리케이션</h1>
+  <input type="text" id="add-text"/>
+  <button id="add-button">추가</button>
+  <div class="container">
+    <p>메모목록
+      <ul id="memo-list"></ul>
+    </p>
+  </div>
+  <script>
+    const onClickAdd = () => {
+      alert('12');
+      const textEle = document.getElementById('add-text');
+
+      const text = textEle.value;
+
+      textEle.value = '';
+
+      const li = document.createElement("li");
+      const div = document.createElement("div");
+      const p = document.createElement("p");
+      p.textContent = text;
+
+      const button = document.createElement('button');
+      button.textContent = '삭제';
+
+      button.addEventListener('click',()=>{
+        const deleteTarget = button.closest('li');
+        document.getElementById('memo-list').removeChild(deleteTarget);
+      });
+      div.appendChild(p);
+      div.appendChild(button);
+      li.appendChild(div);
+      document.getElementById('memo-list').appendChild(li);
+    };
+
+    document.getElementById('add-button').addEventListener('click', ()=>onClickAdd() );
+
+
+
+  </script>
+</body>
+</html>
